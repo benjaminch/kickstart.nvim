@@ -431,6 +431,39 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
+  gopls = {
+    analyses = {
+      nilness = true,
+      unusedparams = true,
+      unusedwrite = true,
+      useany = true,
+    },
+    experimentalPostfixCompletions = true,
+    gofumpt = true,
+    staticcheck = true,
+    usePlaceholders = true,
+  },
+
+  rust_analyzer = {
+    assist = {
+      importEnforceGranularity = true,
+      importPrefix = "crate"
+    },
+    cargo = {
+      allFeatures = true
+    },
+    checkOnSave = {
+      -- default: `cargo check`
+      command = "clippy"
+    },
+    inlayHints = {
+      lifetimeElisionHints = {
+        enable = true,
+        useParameterNames = true
+      },
+    },
+  },
+
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
