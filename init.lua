@@ -464,6 +464,14 @@ local servers = {
     },
   },
 
+  yamlls = {
+    yaml = {
+      schemas = {
+        ["https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.0/schema.yaml"] = "/*"
+      }
+    }
+  },
+
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
